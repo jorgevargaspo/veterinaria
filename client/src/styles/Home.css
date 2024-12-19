@@ -1,0 +1,72 @@
+.Home {
+    text-align: center;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-grow: 1; /* Asegura que ocupe el espacio disponible */
+}
+
+.Home h1 {
+    font-size: 2.5em;
+    margin-block-end: 20px;
+    text-align: center; /* Mantén el título centrado */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Titulo {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Añade espacio entre el texto estático y el dinámico */
+}
+
+.static-text {
+    text-align: start;
+}
+
+.dynamic-text {
+    white-space: nowrap; /* Previene que el texto dinámico se divida en líneas */
+    margin-inline-start: 10px; /* Asegura un pequeño margen entre el texto estático y dinámico */
+}
+
+/* Colores para el texto dinámico */
+.color1 {
+    color: #FF5733; /* Rojo */
+}
+
+.color2 {
+    color: #256d32; /* Verde */
+}
+
+.color3 {
+    color: #133cf3; /* Azul */
+}
+
+.color4 {
+    color: #FF33A1; /* Rosa */
+}
+
+.color5 {
+    color: #FF8C33; /* Naranja */
+}
+
+/* Estilos para los párrafos */
+.Home p {
+    font-size: 1.2em;
+    color: #6c757d;
+    margin-block-end: 20px;
+    text-align: justify; /* Hace que el texto esté alineado a la izquierda y justificado */
+    line-height: 1.6; /* Mejora la legibilidad del texto */
+}
+
+/* Estilos para la imagen */
+.home-image {
+    inline-size: 100%;
+    max-inline-size: 600px; /* Limita el tamaño máximo de la imagen */
+    block-size: auto;
+    margin: 20px auto; /* Centra la imagen horizontalmente */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Añade sombra para un efecto visual agradable */
+}

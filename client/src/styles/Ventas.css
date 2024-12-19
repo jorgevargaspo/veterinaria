@@ -1,0 +1,194 @@
+.ventas-container {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.busqueda-container {
+    margin-bottom: 20px;
+}
+
+.input-busqueda {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.resultados-busqueda {
+    margin-top: 20px;
+}
+
+.productos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 20px;
+}
+
+.producto-card {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.producto-card:hover {
+    transform: translateY(-5px);
+}
+
+.producto-imagen {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.producto-info {
+    padding: 10px;
+    text-align: center;
+}
+
+.detalle-venta {
+    margin-top: 30px;
+    border-top: 1px solid #ddd;
+    padding-top: 20px;
+}
+
+.producto-seleccionado {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.input-cantidad {
+    width: 50px;
+    margin-left: 10px;
+    text-align: center;
+}
+
+.btn-vender {
+    display: inline-block;
+    background-color: #28a745;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.2s;
+}
+
+.btn-vender:hover {
+    background-color: #218838;
+}
+
+/* Estilo para el botón de eliminar */
+.btn-eliminar {
+    background-color: #ff0019; /* Rojo */
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn-eliminar:hover {
+    background-color: #ff0019; /* Rojo más oscuro */
+    transform: scale(1.05);
+}
+
+/* Estilo para el logo en la factura */
+.factura-logo-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.factura-logo {
+    max-width: 120px;
+    height: auto;
+    margin-left: auto; /* Empuja el logo hacia la derecha */
+}
+
+.factura-info {
+    margin-top: 20px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+
+    
+}
+
+.factura-logo {
+    display: block;
+    max-width: 150px;
+    margin: 0 auto 20px auto;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+
+.factura-info label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.factura-info input {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.btn-generar-factura {
+    display: inline-block;
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: background-color 0.2s;
+}
+
+.btn-generar-factura:hover {
+    background-color: #0056b3;
+}
+
+.notificacion {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 15px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    color: white;
+    z-index: 1000;
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out, transform 0.3s;
+    transform: translateY(0);
+}
+
+.notificacion.exito {
+    background-color: #28a745; /* Verde para éxito */
+}
+
+.notificacion.error {
+    background-color: #dc3545; /* Rojo para error */
+}
+
+.notificacion.ocultar {
+    opacity: 0;
+    transform: translateY(-20px);
+}
+

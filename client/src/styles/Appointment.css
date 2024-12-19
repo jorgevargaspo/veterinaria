@@ -1,0 +1,151 @@
+/* Estilos generales para el formulario de citas */
+.appointment-form-container {
+  margin: 40px auto;
+  padding: 30px;
+  max-width: 600px;
+  background-color: #ffffff;
+  border: 2px solid #007bff;
+  border-radius: 16px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.appointment-form-container:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.appointment-form-container h2 {
+  margin-bottom: 20px;
+  font-size: 2em;
+  font-weight: 600;
+  color: #007bff;
+  text-transform: uppercase;
+}
+
+/* Estilos de los campos del formulario */
+.form-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.form-group label {
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #495057;
+  font-size: 1.1em;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #ced4da;
+  border-radius: 8px;
+  font-size: 1em;
+  background-color: #f8f9fa;
+  transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
+}
+
+/* Botón de envío */
+button[type="submit"] {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 14px 22px;
+  font-size: 1.2em;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+  display: inline-block;
+  width: 100%;
+}
+
+button[type="submit"]:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+}
+
+button[type="submit"]:active {
+  background-color: #004085;
+  transform: translateY(2px);
+}
+
+/* Previsualización de imágenes */
+.image-preview {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.image-preview-item {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s;
+}
+
+.image-preview-item:hover {
+  transform: scale(1.1);
+}
+
+.image-preview-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.image-preview-item button {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  padding: 4px;
+  font-size: 0.9em;
+  transition: background-color 0.3s;
+}
+
+.image-preview-item button:hover {
+  background-color: #c82333;
+}
+
+/* Ajuste de fecha y hora */
+.form-group input[type="datetime-local"] {
+  padding: 12px;
+  border-radius: 8px;
+  border: 2px solid #ced4da;
+  background-color: #f8f9fa;
+  transition: border-color 0.3s;
+}
+
+.form-group input[type="datetime-local"]:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
+}
+
+/* Aseguramos que el formulario esté centrado en la vista */
+.appointment-page-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 90vh;
+  background-color: #f8f9fa;
+}

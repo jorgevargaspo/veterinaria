@@ -1,0 +1,145 @@
+
+  
+  /* Estilo de formulario de datos */
+  .datos {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+  }
+  
+  .datos label {
+    display: flex;
+    flex-direction: column;
+    font-weight: 600;
+    color: #333;
+  }
+  
+  .datos input {
+    margin-top: 5px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s ease;
+  }
+  
+  .datos input:focus {
+    border-color: #3498db;
+    outline: none;
+  }
+  
+  /* Botones generales */
+  .datos button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    margin: 10px 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .datos button:hover {
+    opacity: 0.9;
+  }
+  
+  /* Botón de registro */
+  .datos button:first-of-type {
+    background-color: #3498db; /* Azul intenso */
+    color: white;
+  }
+  
+  /* Botón Actualizar */
+  .datos button:last-of-type {
+    background-color: #f44336; /* Rojo */
+    color: white;
+  }
+  
+  /* Lista de usuarios */
+  .listaUsuarios {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow-x: auto;
+  }
+  
+  .listaUsuarios table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+  }
+  
+  .listaUsuarios thead {
+    background-color: #3498db; /* Azul */
+    color: white;
+  }
+  
+  .listaUsuarios th,
+  .listaUsuarios td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .listaUsuarios tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  .listaUsuarios tr:hover {
+    background-color: #e6f7ff;
+  }
+  
+  /* Acciones en tabla */
+  .listaUsuarios button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Botón editar */
+  .listaUsuarios button:first-of-type {
+    background-color: #4CAF50; /* Verde */
+    color: white;
+  }
+  
+  /* Botón eliminar */
+  .listaUsuarios button:last-of-type {
+    background-color: #f44336; /* Rojo */
+    color: white;
+  }
+  
+  /* Hover efectos para botones */
+  .listaUsuarios button:first-of-type:hover {
+    background-color: #45a049; /* Verde más oscuro */
+  }
+  
+  .listaUsuarios button:last-of-type:hover {
+    background-color: #d32f2f; /* Rojo más oscuro */
+  }
+  
+  /* Hover para botón de registro: cambia de rojo a verde */
+.datos button:first-of-type:hover {
+    background-color: #4CAF50; /* Verde */
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .datos {
+      grid-template-columns: 1fr;
+    }
+  
+    table {
+      font-size: 12px;
+    }
+  }
+  

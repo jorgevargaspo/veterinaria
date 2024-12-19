@@ -1,0 +1,59 @@
+- Para la creacion de la base de datos
+
+codigo SQL a ejecutar:
+----------------------------------------
+
+CREATE DATABASE veterinaria;
+USE veterinaria;
+
+CREATE TABLE usuarios (
+    id INT AUTO_INCREMENT PRIMARY KEY UNIQUE,
+    nombre VARCHAR(50) NOT NULL,
+    correo VARCHAR(50) NOT NULL,
+    contrasena VARCHAR(50) NOT NULL
+);
+
+INSERT INTO usuarios (nombre, correo, contrasena) VALUES
+('Juan Perez', 'juan@example.com', '1234'),
+('Maria Lopez', 'maria@example.com', 'abcd'),
+('Carlos Ruiz', 'carlos@example.com', '5678');
+
+
+CREATE TABLE mascotas (
+    id INT AUTO_INCREMENT PRIMARY KEY UNIQUE,
+    nombre VARCHAR(50) NOT NULL,
+    especie VARCHAR(50) NOT NULL,
+    edad INT,
+    id_usuario INT,
+    FOREIGN KEY (id_usuario) REFERENCES usuarios(id) ON DELETE CASCADE
+);
+
+-- Insertar algunas mascotas de ejemplo
+INSERT INTO mascotas (nombre, especie, edad, id_usuario) VALUES 
+('Rex', 'Perro', 5, 1),
+('Miau', 'Gato', 3, 2),
+('Luna', 'Perro', 4, 1);
+
+
+-- Selecciona mascotas de acuerdo a un id de usuario
+SELECT m.id AS mascota_id, 
+       m.nombre AS nombre_mascota, 
+       m.especie, 
+       m.edad
+FROM mascotas m
+JOIN usuarios u ON m.id_usuario = u.id
+WHERE u.id = 1;
+
+-- Crear tabla de productos sin el campo stock y con el campo cod
+CREATE TABLE productos (
+    cod INT AUTO_INCREMENT PRIMARY KEY UNIQUE,
+    nombre VARCHAR(100) NOT NULL,
+    descripcion TEXT,
+    precio INT NOT NULL  -- Cambiado a tipo INT
+);
+
+-- Insertar algunos productos de ejemplo
+INSERT INTO productos (nombre, descripcion, precio) VALUES 
+('Comida para perros', 'Comida balanceada para perros.', 20),  -- precio como entero
+('Juguete para gatos', 'Juguete interactivo para gatos.', 15),  -- precio como entero
+('Champú para mascotas', 'Champú suave para mascotas.', 10);    -- precio como entero
