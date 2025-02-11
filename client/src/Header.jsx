@@ -10,7 +10,7 @@ const Header = () => {
                     alt="Patito de goma"
                     className="logo-img"
                 />
-                <h1>Veterinaria Patito</h1>
+                <h1>Veterinaria</h1>
             </div>
             <nav>
                 <ul>
